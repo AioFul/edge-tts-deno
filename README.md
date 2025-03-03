@@ -1,6 +1,6 @@
 # Edge TTS Deno
 
-Edge TTS Deno 是 Microsoft Edge 在线文本转语音(TTS)服务的Deno实现版本，支持边缘函数部署。这是一个从Python版 [edge-tts](https://github.com/rany2/edge-tts) 移植的项目。
+Edge TTS Deno 是 Microsoft Edge 在线文本转语音(TTS)服务的Deno实现版本，支持边缘函数部署。这是一个从Python版 [edge-tts](https://github.com/rany2/edge-tts) 移植的项目，感谢**rany2**提供的灵感。
 
 ## TODO
 
