@@ -1,0 +1,25 @@
+name = "edge-tts-deno"
+main = "dist/bundle.js"
+compatibility_date = "2024-03-02"
+# compatibility_flags = ["nodejs_compat_v2"]
+
+[build]
+command = "deno run -A scripts/build.ts"  # 预缓存依赖
+
+# 生产环境配置
+[env.production]
+name = "edge-tts-deno"
+vars = { ENVIRONMENT = "production" }
+
+# 开发环境配置
+[env.development]
+name = "edge-tts-deno-dev"
+
+# wrangler.toml (wrangler v3.88.0^)
+[observability.logs]
+enabled = true
+
+# 定义 KV 命名空间 (如果需要缓存)
+# kv_namespaces = [
+#   { binding = "CACHE", id = "xx", preview_id = "xx" }
+# ]

@@ -1,0 +1,17 @@
+{
+    "imports": {
+        "@/": "./",
+        "@src/": "./src/",
+        "@examples/": "./examples/",
+        "@deno/http": "https://deno.land/std@0.218.2/http/server.ts",
+        "@deno/base64": "https://deno.land/std@0.218.2/encoding/base64.ts",
+        "@deno/async": "https://deno.land/std@0.218.2/async/mod.ts",
+        "@deno/async/deferred": "https://deno.land/std@0.218.2/async/deferred.ts",
+        "@deno/path": "https://deno.land/std@0.218.2/path/mod.ts",
+        "@deno/exists": "https://deno.land/std@0.218.2/fs/exists.ts",
+        "@deno/flags": "https://deno.land/std@0.218.2/flags/mod.ts",
+        "@deno/fmt": "https://deno.land/std@0.218.2/fmt/colors.ts",
+        "@ws": "npm:ws@8.16.0",
+        "@oak": "https://deno.land/x/oak@v11.1.0/mod.ts"
+    }
+}

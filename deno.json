@@ -1,0 +1,61 @@
+{
+  "tasks": {
+    "dev": "deno run --allow-net mod.ts",
+    "test": "deno test --allow-net",
+    "lint": "deno lint",
+    "fmt": "deno fmt",
+    "cli": "deno run --allow-net --allow-read --allow-write --allow-env mod.ts",
+    "api": "export PORT=3001 && deno run --allow-net --allow-env --allow-read mod.ts",
+    "example:simple": "deno run --allow-net examples/simple_tts.ts",
+    "example:subtitle": "deno run --allow-net --allow-write examples/subtitle_generation.ts",
+    "example:advanced": "deno run --allow-net --allow-write examples/advanced_streaming.ts",
+    "test:subtitle": "deno test --allow-net examples/test_subtitle.ts",
+    "check": "deno check mod.ts"
+  },
+  "fmt": {
+    "files": {
+      "include": [
+        "src/",
+        "examples/"
+      ]
+    },
+    "options": {
+      "useTabs": false,
+      "lineWidth": 80,
+      "indentWidth": 2,
+      "singleQuote": true,
+      "proseWrap": "preserve"
+    }
+  },
+  "lint": {
+    "files": {
+      "include": [
+        "src/",
+        "examples/"
+      ]
+    },
+    "rules": {
+      "tags": [
+        "recommended"
+      ]
+    }
+  },
+  "compilerOptions": {
+    "strict": true,
+    "lib": [
+      "deno.window"
+    ]
+  },
+  "importMap": "import_map.json",
+  "deploy": {
+    "project": "bb19f283-4e40-4240-bc28-d2bc14346cc0",
+    "exclude": [
+      "**/node_modules"
+    ],
+    "include": [
+      "**/*.ts",
+      "*.json"
+    ],
+    "entrypoint": "mod.ts"
+  }
+}
